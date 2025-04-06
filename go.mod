@@ -1,11 +1,10 @@
-module github.com/manojks1999/kv-raft
+module github.com/manojks1999/kv-store
 
 go 1.22
 
 toolchain go1.23.8
 
 require (
-	github.com/manojks1999/kv-store v0.0.0-20250324161151-6192ed782799
 	github.com/gorilla/mux v1.8.1
 	github.com/sirupsen/logrus v1.9.3
 	go.etcd.io/raft/v3 v3.6.0-alpha.0

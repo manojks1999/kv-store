@@ -26,7 +26,13 @@ stop-cluster:
 	@for pid in $(shell lsof -ti:2387); do kill -9 $$pid 2>/dev/null || true; done
 
 test:
-	python3 test.py
+	rm -rf venv && \
+	python3 -m venv venv && \
+	. venv/bin/activate && \
+	pip3 install --upgrade pip && \
+	pip3 install -r requirements.txt && \
+	python3 test.py && \
+	deactivate
 
 
 member1:
